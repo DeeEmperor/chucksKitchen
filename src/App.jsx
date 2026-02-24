@@ -5,23 +5,26 @@ import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import Home from './pages/Home';
 import './App.css';
 
 function AppLayout() {
   const location = useLocation();
   const isAuthPage = location.pathname === '/signin' || location.pathname === '/signup';
+  const isHomePage = location.pathname === '/home';
 
   return (
     <div className="min-h-screen flex flex-col bg-white w-full">
-      {!isAuthPage && <Navbar />}
+      {(!isAuthPage && !isHomePage) && <Navbar />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HeroSection />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </main>
-      <Footer />
+      {(!isAuthPage && !isHomePage) && <Footer />}
     </div>
   );
 }

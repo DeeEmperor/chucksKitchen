@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaApple, FaPhone } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SplitLayout from '../components/SplitLayout';
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const navigate = useNavigate();
+
+    const handleContinue = () => {
+        navigate('/home');
+    };
 
     const signupForm = (
         <div className="w-full flex flex-col items-center">
@@ -105,7 +110,10 @@ const SignUp = () => {
                 </div>
 
                 {/* Continue Button */}
-                <button className="w-full py-3.5 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-sm mt-2">
+                <button 
+                    onClick={handleContinue}
+                    className="w-full py-3.5 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-sm mt-2"
+                >
                     Continue
                 </button>
 
