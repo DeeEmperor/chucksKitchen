@@ -140,13 +140,20 @@ const MyOrders = () => {
           )}
         </div>
 
-        <div className="flex justify-start">
+        <div className="flex flex-col sm:flex-row justify-between items-center mt-8 pt-6 border-t border-gray-100 gap-6">
           <Link 
             to="/explore" 
             className="flex items-center gap-2 text-brand-blue font-medium hover:text-blue-700 transition-colors group"
           >
             <MdAdd size={20} className="group-hover:scale-110 transition-transform" />
             Add more items from Chuks Kitchen
+          </Link>
+          
+          <Link
+             to="/order-summary"
+             className="w-full sm:w-auto px-8 py-3.5 bg-brand-orange text-white text-lg font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-sm text-center"
+          >
+             Proceed to Checkout
           </Link>
         </div>
 

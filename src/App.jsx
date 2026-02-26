@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Explore from './pages/Explore';
 import FoodDetails from './pages/FoodDetails';
 import MyOrders from './pages/MyOrders';
+import OrderSummary from './pages/OrderSummary';
+import DeliveryDetails from './pages/DeliveryDetails';
 import './App.css';
 
 function AppLayout() {
@@ -18,11 +20,13 @@ function AppLayout() {
   const isExplorePage = location.pathname === '/explore';
   const isFoodDetailsPage = location.pathname.startsWith('/food/');
   const isMyOrdersPage = location.pathname === '/my-orders';
+  const isOrderSummaryPage = location.pathname === '/order-summary';
+  const isDeliveryDetailsPage = location.pathname === '/delivery-details';
 
   return (
     <div className="min-h-screen flex flex-col bg-white w-full">
-      {(!isAuthPage && !isHomePage && !isExplorePage && !isFoodDetailsPage && !isMyOrdersPage) && <Navbar />}
-      {(isExplorePage || isFoodDetailsPage || isMyOrdersPage) && <HomeNavbar />}
+      {(!isAuthPage && !isHomePage && !isExplorePage && !isFoodDetailsPage && !isMyOrdersPage && !isOrderSummaryPage && !isDeliveryDetailsPage) && <Navbar />}
+      {(isExplorePage || isFoodDetailsPage || isMyOrdersPage || isOrderSummaryPage || isDeliveryDetailsPage) && <HomeNavbar />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Navigate to="/signin" replace />} />
@@ -30,6 +34,8 @@ function AppLayout() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/food/:id" element={<FoodDetails />} />
           <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="/order-summary" element={<OrderSummary />} />
+          <Route path="/delivery-details" element={<DeliveryDetails />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
