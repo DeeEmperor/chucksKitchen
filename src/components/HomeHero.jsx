@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
+import partyJollofImage from '../assets/partyJollof.png';
 
 const HomeHero = () => {
     return (
@@ -8,7 +9,7 @@ const HomeHero = () => {
             <div 
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: "url('/src/assets/partyJollof.png')",
+                    backgroundImage: `url(${partyJollofImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}

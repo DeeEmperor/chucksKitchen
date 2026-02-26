@@ -1,4 +1,5 @@
 import React from 'react';
+import newMenuAdditionsImage from '../assets/newmenuadditions.png';
 
 const NewMenuAdditions = () => {
     return (
@@ -7,7 +8,7 @@ const NewMenuAdditions = () => {
             <div 
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: "url('/src/assets/newmenuadditions.png')",
+                    backgroundImage: `url(${newMenuAdditionsImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}

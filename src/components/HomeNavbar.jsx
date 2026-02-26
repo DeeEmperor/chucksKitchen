@@ -23,7 +23,7 @@ const HomeNavbar = () => {
                 </Link>
                 <Link 
                     to="/explore" 
-                    className={`h-full py-6 transition-colors ${isActive('/explore') ? 'text-brand-orange' : 'hover:text-brand-orange'}`}
+                    className={`h-full py-6 transition-colors ${isActive('/explore') ? 'text-brand-orange border-b-2 border-brand-orange' : 'hover:text-brand-orange'}`}
                 >
                     Explore
                 </Link>
@@ -41,9 +41,12 @@ const HomeNavbar = () => {
                 </Link>
             </div>
 
-            {/* Empty div to balance flex spacing if needed, but since we removed the login button 
-                we can just let the flex-between handle the logo on the left and links correctly. */}
-             <div className="w-10"></div>
+            {/* Login Button Area */}
+            <div className="flex items-center">
+                 <Link to="/signin" className="px-8 py-2 bg-brand-orange text-white rounded-md hover:bg-orange-600 transition-colors font-medium">
+                    Login
+                </Link>
+            </div>
         </nav>
     );
 };

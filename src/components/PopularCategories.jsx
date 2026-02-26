@@ -1,12 +1,16 @@
 import React from 'react';
+import jollofDelightsImage from '../assets/jollofDelights.png';
+import swallowAndSoupImage from '../assets/swallowandsoup.png';
+import grillsAndBbqImage from '../assets/grillsandbbq.png';
+import sweetAndTreatImage from '../assets/sweetandtreat.png';
 
 const categories = [
-    { id: 1, name: 'Jollof Delights', image: '/src/assets/jollofDelights.png' },
-    { id: 2, name: 'Swallow & Soups', image: '/src/assets/swallowandsoup.png' },
-    { id: 3, name: 'Grills & BBQ', image: '/src/assets/grillsandbbq.png' },
-    { id: 4, name: 'Sweet Treats', image: '/src/assets/sweetandtreat.png' },
-    { id: 5, name: 'Jollof Delights', image: '/src/assets/jollofDelights.png' }, // Repeating based on design
-    { id: 6, name: 'Jollof Delights', image: '/src/assets/jollofDelights.png' }, // Repeating based on design
+    { id: 1, name: 'Jollof Delights', image: jollofDelightsImage },
+    { id: 2, name: 'Swallow & Soups', image: swallowAndSoupImage },
+    { id: 3, name: 'Grills & BBQ', image: grillsAndBbqImage },
+    { id: 4, name: 'Sweet Treats', image: sweetAndTreatImage },
+    { id: 5, name: 'Jollof Delights', image: jollofDelightsImage }, // Repeating based on design
+    { id: 6, name: 'Jollof Delights', image: jollofDelightsImage }, // Repeating based on design
 ];
 
 const PopularCategories = () => {

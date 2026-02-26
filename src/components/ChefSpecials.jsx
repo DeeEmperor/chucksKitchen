@@ -1,4 +1,7 @@
 import React from 'react';
+import spicyTilapiaPepperSoupImage from '../assets/spicytilapiapeppersoup.png';
+import jollofRiceAndFriedChickenImage from '../assets/jollofriceandfiredchicken.png';
+import egusiAndPoundedYamImage from '../assets/egusiandpoundedyam.png';
 
 const specials = [
     { 
@@ -6,42 +9,42 @@ const specials = [
         name: 'Spicy Tilapia Pepper Soup', 
         description: 'Authentic pepper soup, cooked slowly to perfection with high-quality tilapia.',
         price: 'N3,500',
-        image: '/src/assets/spicytilapiapeppersoup.png' 
+        image: spicyTilapiaPepperSoupImage 
     },
     { 
         id: 2, 
         name: 'Jollof Rice & Fried Chicken', 
         description: 'Our signature rich and deeply seasoned Jollof rice, served with tender chicken.',
         price: 'N3,500',
-        image: '/src/assets/jollofriceandfiredchicken.png' 
+        image: jollofRiceAndFriedChickenImage 
     },
     { 
         id: 3, 
         name: 'Egusi Soup & Pounded Yam', 
         description: 'Rich and savory Egusi soup with assorted meats, served with perfectly pounded yam.',
         price: 'N4,500',
-        image: '/src/assets/egusiandpoundedyam.png' 
+        image: egusiAndPoundedYamImage 
     },
     { 
         id: 4, 
         name: 'Spicy Tilapia Pepper Soup', 
         description: 'Authentic pepper soup, cooked slowly to perfection with high-quality tilapia.',
         price: 'N3,500',
-        image: '/src/assets/spicytilapiapeppersoup.png' 
+        image: spicyTilapiaPepperSoupImage 
     },
     { 
         id: 5, 
         name: 'Jollof Rice & Fried Chicken', 
         description: 'Our signature rich and deeply seasoned Jollof rice, served with tender chicken.',
         price: 'N3,500',
-        image: '/src/assets/jollofriceandfiredchicken.png' 
+        image: jollofRiceAndFriedChickenImage 
     },
     { 
         id: 6, 
         name: 'Egusi Soup & Pounded Yam', 
         description: 'Rich and savory Egusi soup with assorted meats, served with perfectly pounded yam.',
         price: 'N4,500',
-        image: '/src/assets/egusiandpoundedyam.png' 
+        image: egusiAndPoundedYamImage 
     },
 ];
 
