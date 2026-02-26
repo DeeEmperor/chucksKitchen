@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { MdArrowForward } from 'react-icons/md';
 
 import heroImage from '../assets/jollofDelights.png';
 
@@ -109,37 +110,42 @@ const Explore = () => {
                   <Link 
                     to={`/food/${item.id}`}
                     key={`${item.id}-${idx}`} 
-                    className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full cursor-pointer group"
+                    className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-row md:flex-col h-full cursor-pointer group overflow-hidden"
                   >
                     
-                    <div className="w-full h-48 sm:h-56 relative overflow-hidden bg-gray-100">
+                    <div className="w-[110px] h-auto min-h-[110px] md:w-full md:h-48 flex-shrink-0 relative overflow-hidden bg-gray-100 p-2 md:p-0">
                       <img 
                         src={item.image} 
                         alt={item.name} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover rounded-lg md:rounded-none md:rounded-t-xl group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     
-                    <div className="p-4 flex flex-col flex-grow">
-                      <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{item.name}</h4>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                    <div className="p-3 md:p-4 flex flex-col flex-grow justify-center md:justify-start">
+                      <h4 className="text-[15px] md:text-lg font-bold text-gray-900 mb-1 md:mb-2 group-hover:text-brand-orange transition-colors leading-tight">{item.name}</h4>
+                      <p className="text-gray-600 text-[13px] md:text-sm mb-2 md:mb-4 line-clamp-2 md:line-clamp-3 leading-snug">
                         {item.description}
                       </p>
                       
-                      <div className="flex items-center justify-between mt-auto pt-2">
-                        <span className="text-brand-orange font-bold text-lg">{item.price}</span>
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-brand-orange font-bold text-[15px] md:text-lg">{item.price}</span>
                         <button 
                           onClick={(e) => {
                             e.preventDefault();
                           }}
-                          className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center hover:bg-orange-600 transition-colors shadow-sm"
+                          className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-brand-orange text-brand-orange flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors shadow-sm"
                         >
-                           <span className="text-xl font-medium mt-[-2px]">+</span>
+                           <MdArrowForward className="text-[14px] md:text-xl" />
                         </button>
                       </div>
                     </div>
                   </Link>
                 ))}
+              </div>
+              <div className="w-full flex justify-center mt-6 mb-8">
+                <Link to="#" className="text-[#64B5F6] text-[13px] font-medium hover:underline">
+                  View All Categories
+                </Link>
               </div>
             </div>
           ))}
