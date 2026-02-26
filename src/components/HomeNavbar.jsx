@@ -17,7 +17,7 @@ const HomeNavbar = () => {
             <div className="hidden md:flex items-center gap-12 font-medium text-gray-800 h-full">
                 <Link 
                     to="/home" 
-                    className={`h-full py-6 transition-colors ${isActive('/home') ? 'text-brand-orange' : 'hover:text-brand-orange'}`}
+                    className={`h-full py-6 transition-colors ${isActive('/home') ? 'text-brand-orange border-b-2 border-brand-orange' : 'hover:text-brand-orange'}`}
                 >
                     Home
                 </Link>
@@ -29,13 +29,13 @@ const HomeNavbar = () => {
                 </Link>
                 <Link 
                     to="/my-orders" 
-                    className={`h-full py-6 transition-colors ${isActive('/my-orders') ? 'text-brand-orange' : 'hover:text-brand-orange'}`}
+                    className={`h-full py-6 transition-colors ${isActive('/my-orders') ? 'text-brand-orange border-b-2 border-brand-orange' : 'hover:text-brand-orange'}`}
                 >
                     My Orders
                 </Link>
                 <Link 
                     to="/account" 
-                    className={`h-full py-6 transition-colors ${isActive('/account') ? 'text-brand-orange' : 'hover:text-brand-orange'}`}
+                    className={`h-full py-6 transition-colors ${isActive('/account') ? 'text-brand-orange border-b-2 border-brand-orange' : 'hover:text-brand-orange'}`}
                 >
                     Account
                 </Link>

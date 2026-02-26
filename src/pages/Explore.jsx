@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Hero Background Image from the provided assets
 import heroImage from '../assets/jollofDelights.png';
@@ -118,20 +119,24 @@ const Explore = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 {section.items.map((item, idx) => (
-                  <div key={`${item.id}-${idx}`} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
+                  <Link 
+                    to={`/food/${item.id}`}
+                    key={`${item.id}-${idx}`} 
+                    className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full cursor-pointer group"
+                  >
                     
                     {/* Image Box */}
                     <div className="w-full h-48 sm:h-56 relative overflow-hidden bg-gray-100">
                       <img 
                         src={item.image} 
                         alt={item.name} 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     
                     {/* Content Box */}
                     <div className="p-4 flex flex-col flex-grow">
-                      <h4 className="text-lg font-bold text-gray-900 mb-2">{item.name}</h4>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-orange transition-colors">{item.name}</h4>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                         {item.description}
                       </p>
@@ -139,12 +144,17 @@ const Explore = () => {
                       {/* Price and Add Button at the bottom */}
                       <div className="flex items-center justify-between mt-auto pt-2">
                         <span className="text-brand-orange font-bold text-lg">{item.price}</span>
-                        <button className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center hover:bg-orange-600 transition-colors shadow-sm">
+                        <button 
+                          onClick={(e) => {
+                            e.preventDefault(); // Prevents navigation when clicking just the add button
+                          }}
+                          className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center hover:bg-orange-600 transition-colors shadow-sm"
+                        >
                            <span className="text-xl font-medium mt-[-2px]">+</span>
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

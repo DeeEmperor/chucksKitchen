@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import spicyTilapiaPepperSoupImage from '../assets/spicytilapiapeppersoup.png';
 import jollofRiceAndFriedChickenImage from '../assets/jollofriceandfiredchicken.png';
 import egusiAndPoundedYamImage from '../assets/egusiandpoundedyam.png';
@@ -57,9 +58,10 @@ const ChefSpecials = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {specials.map((item) => (
-                    <div 
+                    <Link 
+                        to={`/food/${item.id}`}
                         key={item.id} 
-                        className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-gray-100 flex flex-col"
+                        className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden border border-gray-100 flex flex-col cursor-pointer"
                     >
                         <div className="w-full h-56 overflow-hidden">
                             <img 
@@ -69,7 +71,7 @@ const ChefSpecials = () => {
                             />
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
-                            <h3 className="text-xl font-bold text-gray-800 mb-2">
+                            <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-brand-orange transition-colors">
                                 {item.name}
                             </h3>
                             <p className="text-gray-600 text-sm mb-6 flex-grow">
@@ -79,12 +81,18 @@ const ChefSpecials = () => {
                                 <span className="text-brand-orange font-bold text-lg">
                                     {item.price}
                                 </span>
-                                <button className="px-6 py-2 bg-brand-orange text-white text-sm font-semibold rounded-md hover:bg-orange-600 transition-colors shadow-sm">
+                                <button 
+                                    onClick={(e) => {
+                                        e.preventDefault(); // Prevent navigating when just adding to cart
+                                        // add to cart logic here
+                                    }}
+                                    className="px-6 py-2 bg-brand-orange text-white text-sm font-semibold rounded-md hover:bg-orange-600 transition-colors shadow-sm"
+                                >
                                     Add to cart
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
