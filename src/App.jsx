@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomeNavbar from './components/HomeNavbar';
 import Footer from './components/Footer';
@@ -53,7 +53,7 @@ function AppLayout() {
 
 function App() {
   return (
-    <Router basename="/chucksKitchen/">
+    <Router>
       <AppLayout />
     </Router>
   );
