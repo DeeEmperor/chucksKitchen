@@ -16,11 +16,10 @@ const Home = () => {
             <main className="flex-grow flex flex-col">
                 <HomeHero />
                 
-                {/* Spacing for the floating search bar to not overlap next section */}
                 <div className="h-16 w-full"></div> 
 
                 <PopularCategories />
-                <div className="w-full h-px bg-gray-200 my-8 max-w-7xl mx-auto"></div> {/* Divider */}
+                <div className="w-full h-px bg-gray-200 my-8 max-w-7xl mx-auto"></div>
                 <ChefSpecials />
                 <NewMenuAdditions />
             </main>

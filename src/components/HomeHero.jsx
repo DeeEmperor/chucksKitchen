@@ -5,7 +5,6 @@ import partyJollofImage from '../assets/partyJollof.png';
 const HomeHero = () => {
     return (
         <section className="relative w-full h-[600px] flex flex-col justify-center px-8 md:px-16 lg:px-24">
-            {/* background image with overlay */}
             <div 
                 className="absolute inset-0 z-0"
                 style={{
@@ -14,11 +13,9 @@ const HomeHero = () => {
                     backgroundPosition: 'center',
                 }}
             >
-                {/* dark gradient overlay to ensure text readability */}
                 <div className="absolute inset-0 bg-black/40"></div>
             </div>
 
-            {/* content layer */}
             <div className="relative z-10 max-w-3xl flex flex-col items-start text-left">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                     The Heart of Nigerian Home Cooking
@@ -33,7 +30,6 @@ const HomeHero = () => {
                 </button>
             </div>
 
-            {/* floating search bar positioned perfectly at the bottom */}
             <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-4xl px-4 z-20">
                 <div className="bg-white rounded-lg shadow-xl p-2 flex items-center">
                     <span className="text-gray-400 pl-4 pr-2 text-xl">

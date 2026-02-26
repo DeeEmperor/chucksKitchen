@@ -9,8 +9,8 @@ const categories = [
     { id: 2, name: 'Swallow & Soups', image: swallowAndSoupImage },
     { id: 3, name: 'Grills & BBQ', image: grillsAndBbqImage },
     { id: 4, name: 'Sweet Treats', image: sweetAndTreatImage },
-    { id: 5, name: 'Jollof Delights', image: jollofDelightsImage }, // Repeating based on design
-    { id: 6, name: 'Jollof Delights', image: jollofDelightsImage }, // Repeating based on design
+    { id: 5, name: 'Jollof Delights', image: jollofDelightsImage },
+    { id: 6, name: 'Jollof Delights', image: jollofDelightsImage },
 ];
 
 const PopularCategories = () => {

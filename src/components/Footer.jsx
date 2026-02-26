@@ -10,7 +10,6 @@ const Footer = () => {
         <footer className="bg-brand-brown text-white py-16 px-8 relative">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                 
-                {/* Brand Column */}
                 <div className="col-span-1 md:col-span-1 space-y-6">
                     <h3 className="text-2xl font-script text-brand-orange">Chuks Kitchen</h3>
                     <p className="text-gray-300 leading-relaxed">
@@ -21,7 +20,6 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Quick Links */}
                 <div className="col-span-1">
                     <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
                     <ul className="space-y-4 text-gray-300 text-sm">
@@ -33,7 +31,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Contact Us */}
                 <div className="col-span-1">
                     <h4 className="text-lg font-semibold mb-6 text-white">Contact Us</h4>
                     <ul className="space-y-4 text-gray-300 text-sm">
@@ -43,7 +40,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                 {/* Social Links */}
                  <div className="col-span-1">
                      <div className="flex flex-col gap-4">
                         <a href="#" className="text-gray-300 hover:text-white flex items-center gap-2 text-sm"><FaFacebook /> Facebook</a>
@@ -54,7 +50,6 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Scroll to Top Button */}
              <button 
                 onClick={scrollToTop}
                 className="absolute bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all"

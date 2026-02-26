@@ -14,7 +14,6 @@ const SignIn = () => {
 
     const loginForm = (
         <div className="w-full flex flex-col items-center">
-            {/* Logo & Title */}
             <div className="flex flex-col items-center mb-10 w-full">
                 <div className="text-5xl text-brand-orange font-script mb-2">
                     Chuks Kitchen
@@ -24,7 +23,6 @@ const SignIn = () => {
                 </h2>
             </div>
 
-            {/* Form Fields */}
             <div className="w-full flex flex-col gap-6 max-w-md">
                 <div className="flex flex-col gap-2">
                     <label className="text-sm font-medium text-gray-700">Email or phone number</label>
@@ -59,13 +57,11 @@ const SignIn = () => {
                             {showPassword ? <FaEye /> : <FaEyeSlash />}
                         </button>
                     </div>
-                    {/* Forgot Password */}
                     <div className="flex justify-end mt-1">
                         <a href="#" className="text-sm text-blue-500 hover:text-blue-600 font-medium whitespace-nowrap">Forgot Password?</a>
                     </div>
                 </div>
 
-                {/* Continue Button */}
                 <button 
                     onClick={handleContinue}
                     className="w-full py-3.5 bg-brand-orange text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors shadow-sm mt-2"
@@ -73,13 +69,11 @@ const SignIn = () => {
                     Continue
                 </button>
 
-                {/* Divider */}
                 <div className="relative flex items-center justify-center py-2">
                     <div className="w-full border-t border-gray-300"></div>
                     <span className="absolute bg-[#F8F9FA] px-4 text-sm text-gray-500 font-medium">Or continue with</span>
                 </div>
 
-                {/* Social Buttons */}
                 <div className="flex flex-col gap-4">
                     <button className="w-full flex items-center justify-center gap-3 py-3.5 border border-gray-300 bg-white rounded-lg hover:bg-gray-50 transition-colors text-gray-700 font-medium shadow-sm">
                         <span className="text-xl"><FcGoogle /></span>
@@ -91,7 +85,6 @@ const SignIn = () => {
                     </button>
                 </div>
 
-                {/* Sign Up Link */}
                 <div className="text-center mt-2">
                     <span className="text-sm text-gray-600">Don't have an account? </span>
                     <Link to="/signup" className="text-sm text-blue-500 hover:text-blue-600 font-medium">Create an account</Link>

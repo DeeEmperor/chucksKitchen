@@ -4,7 +4,6 @@ import newMenuAdditionsImage from '../assets/newmenuadditions.png';
 const NewMenuAdditions = () => {
     return (
         <section className="relative w-full py-24 flex flex-col items-center justify-center text-center px-4 mt-8">
-            {/* Background Image with Overlay */}
             <div 
                 className="absolute inset-0 z-0"
                 style={{
@@ -13,11 +12,9 @@ const NewMenuAdditions = () => {
                     backgroundPosition: 'center',
                 }}
             >
-                {/* Dark gradient overlay to ensure text readability */}
                 <div className="absolute inset-0 bg-black/60"></div>
             </div>
 
-            {/* Content Content layer */}
             <div className="relative z-10 max-w-4xl flex flex-col items-start text-left w-full px-4 md:px-12">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                     Introducing Our New Menu Additions!

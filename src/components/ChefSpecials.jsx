@@ -83,8 +83,7 @@ const ChefSpecials = () => {
                                 </span>
                                 <button 
                                     onClick={(e) => {
-                                        e.preventDefault(); // Prevent navigating when just adding to cart
-                                        // add to cart logic here
+                                        e.preventDefault();
                                     }}
                                     className="px-6 py-2 bg-brand-orange text-white text-sm font-semibold rounded-md hover:bg-orange-600 transition-colors shadow-sm"
                                 >

@@ -8,12 +8,10 @@ const HomeNavbar = () => {
 
     return (
         <nav className="flex items-center justify-between px-8 py-6 w-full max-w-7xl mx-auto">
-            {/* Logo */}
             <Link to="/home" className="text-5xl text-brand-orange font-script">
                 Chuks Kitchen
             </Link>
             
-            {/* Navigation Links */}
             <div className="hidden md:flex items-center gap-12 font-medium text-gray-800 h-full">
                 <Link 
                     to="/home" 
@@ -41,7 +39,6 @@ const HomeNavbar = () => {
                 </Link>
             </div>
 
-            {/* Login Button Area */}
             <div className="flex items-center">
                  <Link to="/signin" className="px-8 py-2 bg-brand-orange text-white rounded-md hover:bg-orange-600 transition-colors font-medium">
                     Login
