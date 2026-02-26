@@ -11,6 +11,8 @@ import FoodDetails from './pages/FoodDetails';
 import MyOrders from './pages/MyOrders';
 import OrderSummary from './pages/OrderSummary';
 import DeliveryDetails from './pages/DeliveryDetails';
+import Payment from './pages/Payment';
+import OrderSuccess from './pages/OrderSuccess';
 import './App.css';
 
 function AppLayout() {
@@ -22,11 +24,13 @@ function AppLayout() {
   const isMyOrdersPage = location.pathname === '/my-orders';
   const isOrderSummaryPage = location.pathname === '/order-summary';
   const isDeliveryDetailsPage = location.pathname === '/delivery-details';
+  const isPaymentPage = location.pathname === '/payment';
+  const isOrderSuccessPage = location.pathname === '/order-success';
 
   return (
     <div className="min-h-screen flex flex-col bg-white w-full">
-      {(!isAuthPage && !isHomePage && !isExplorePage && !isFoodDetailsPage && !isMyOrdersPage && !isOrderSummaryPage && !isDeliveryDetailsPage) && <Navbar />}
-      {(isExplorePage || isFoodDetailsPage || isMyOrdersPage || isOrderSummaryPage || isDeliveryDetailsPage) && <HomeNavbar />}
+      {(!isAuthPage && !isHomePage && !isExplorePage && !isFoodDetailsPage && !isMyOrdersPage && !isOrderSummaryPage && !isDeliveryDetailsPage && !isPaymentPage && !isOrderSuccessPage) && <Navbar />}
+      {(isExplorePage || isFoodDetailsPage || isMyOrdersPage || isOrderSummaryPage || isDeliveryDetailsPage || isPaymentPage || isOrderSuccessPage) && <HomeNavbar />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Navigate to="/signin" replace />} />
@@ -36,6 +40,8 @@ function AppLayout() {
           <Route path="/my-orders" element={<MyOrders />} />
           <Route path="/order-summary" element={<OrderSummary />} />
           <Route path="/delivery-details" element={<DeliveryDetails />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>

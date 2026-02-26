@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const DeliveryDetails = () => {
   const [deliveryTime, setDeliveryTime] = useState('ASAP(30-25)');
@@ -53,7 +54,12 @@ const DeliveryDetails = () => {
           />
         </div>
 
-       
+        <Link 
+          to="/payment"
+          className="w-full py-4 bg-brand-orange text-white text-lg font-bold rounded-lg hover:bg-orange-600 transition-colors shadow-sm text-center block mt-8 cursor-pointer"
+        >
+          Proceed to Payment
+        </Link>
 
       </div>
     </div>
