@@ -3,8 +3,8 @@ import heroImage from '../assets/onboardingImage.svg';
 
 const SplitLayout = ({ rightContent, showOverlay = false, overlayText, overlaySubtext }) => {
     return (
-        <section className="w-full max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row gap-12 items-stretch">
-            <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-xl bg-gray-200 flex items-center justify-center relative">
+        <section className="w-full max-w-7xl mx-auto px-6 md:px-8 py-8 md:py-12 flex flex-col md:flex-row gap-12 items-stretch">
+            <div className="hidden md:flex w-full md:w-1/2 rounded-2xl overflow-hidden shadow-xl bg-gray-200 items-center justify-center relative">
                 <img src={heroImage} alt="Family eating Nigerian food" className={`w-full h-full object-cover absolute inset-0 ${showOverlay ? 'mix-blend-overlay opacity-50' : ''}`} />
                 
                 {showOverlay && (
